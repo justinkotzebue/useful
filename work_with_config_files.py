@@ -1,15 +1,42 @@
 import os
+import re
 import xml.etree.ElementTree as ET
 
 
-cfg = r"/home/jb/Documents/acolite_linux/acolite_settings.cfg"
 replace_string = r"/home/jb/sen2cor/cfg/justindiana"
-search_string = 'limit'
 
-o = open(cfg)
 print(o.read())
-r = o.read()
-r.replace()
+
+
+r.replace(search_string, 'bla')
+print(r)
+
+
+import re
+cfg = r"/home/jb/Documents/acolite_linux/acolite_settings.cfg"
+def read_file_change_string(infile, search_string, replace_string, outfile[]):
+    """
+    Reads file seaches for Node and changes its values
+    Parameters
+    ----------
+    infile : str
+        input file path e.g. .txt, .cfg...
+    search_string : str
+        string to search what returns the string to be replaced
+        e.g. 'limit=(.*)' searches for the node 'limit=' and returns what will
+        be replaced
+    replace_string : str
+        string which will be used to replace original
+    outfile : str
+        output path, if empty infile will be updated
+    """
+    o = open(cfg)
+    p = re.compile('limit=(.*)')
+    s = o.read()
+    to_repl = p.findall(s)
+    text_changed = s.replace(to_repl[0], 'tessst')
+
+
 def xml_change_field(xml_in, search_string, replace_string, xml_out=[]):
     '''
     Search for 'node' and repace text in field & updates/writes new file
