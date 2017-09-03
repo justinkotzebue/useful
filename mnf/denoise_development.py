@@ -15,7 +15,8 @@ with rasterio.open(instack) as intif:
     out_meta = intif.meta.copy()
     (stack[:,land]) = 0
     t_stack = np.transpose(stack, (1,2,0))
-print(stack.shape)
+
+ss = stack.shape[0]
 print(t_stack.shape)
 # help(spectral.calc_stats)
 #view =imshow(t_stack,(8,3,2))
