@@ -3,13 +3,18 @@ import xml.etree.ElementTree as ET
 
 
 cfg = r"/home/jb/Documents/acolite_linux/acolite_settings.cfg"
-replace_string = r"/home/jb/sen2cor/cfg/justindiana"
-search_string = 'limit'
+replace_string = r"/home/jb/sen2cor/cfg/rel_justindiana"
+search_string = 'Target_Directory'
 
+xml_in = r"..\..\..\Documents\sen2cor\cfg\L2A_GIPP.xml"
+
+os.path.exists(rel)
 o = open(cfg)
 print(o.read())
 r = o.read()
 r.replace()
+os.path.abspath(xml_in)
+xml_change_field(xml_in, search_string, replace_string, xml_out=[])
 def xml_change_field(xml_in, search_string, replace_string, xml_out=[]):
     '''
     Search for 'node' and repace text in field & updates/writes new file
