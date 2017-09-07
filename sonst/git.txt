@@ -1,0 +1,3 @@
+save password:
+git config credential.helper store
+git pull # from repo credentials are stored inconda
