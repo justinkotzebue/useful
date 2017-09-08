@@ -2,12 +2,13 @@ import numpy as np
 import rasterio
 import spectral
 #from spectral import *
-from spectral.algorithms import GaussianStats as stats
 
 
 
-instack = r"/media/jb/INTENSO/GIS/Sentinel_data/resampled_S2A_MSIL1C_20161224T104442_N0204_R008_T32UPF_20161224T104438.SAFE/stack.tif"
+#instack = r"/media/jb/INTENSO/GIS/Sentinel_data/resampled_S2A_MSIL1C_20161224T104442_N0204_R008_T32UPF_20161224T104438.SAFE/stack.tif"
+instack = r"/home/jb/Downloads/stack_masked.tif"
 outstack = r"/home/jb/Downloads/stack_denoised5.tif"
+
 with rasterio.open(instack) as intif:
     stack = intif.read()
     land = stack[7, :, :] > 500
@@ -15,7 +16,7 @@ with rasterio.open(instack) as intif:
     out_meta = intif.meta.copy()
     (stack[:,land]) = 0
     t_stack = np.transpose(stack, (1,2,0))
-
+help(spectral.calc_stats)
 ss = stack.shape[0]
 print(t_stack.shape)
 # help(spectral.calc_stats)
