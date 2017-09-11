@@ -1,5 +1,4 @@
 
-#count uniqe values in array
 import numpy as np
 import pandas as pd
 import operator
