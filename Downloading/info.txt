@@ -1,0 +1,2 @@
+Server : Amazon
+https://github.com/sinergise/sentinelhub

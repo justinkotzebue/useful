@@ -20,6 +20,7 @@ y =[]
 for i in y1:
     y.append(i*10)
 
+help(y.append)
 
 def plot_poly_fit(x, y, poly_fit=3, title=[""], save_path=[]):
     p30 = np.poly1d(np.polyfit(x, y, poly_fit))
@@ -48,3 +49,5 @@ def plot_poly_fit(x, y, poly_fit=3, title=[""], save_path=[]):
     return l, coefficient_of_dermination
 
 plot_poly_fit(x, y, poly_fit=3, save_path=[r'C:\Users\juko\Downloads\1a.png'])
+
+plot_poly_fit(x,y)
