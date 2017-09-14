@@ -1,0 +1,19 @@
+name: cm
+channels:
+    - conda-forge
+
+dependencies:
+    - python=3
+    - scikit-image
+    - gdal
+    - rios
+    - python-fmask
+    - rasterio
+    - pip:
+      - click
+      - tables
+      - logging
+      - git+https://github.com/DHI-GRAS/gis_utils.git
+      - git+https://github.com/DHI-GRAS/gdal_utils.git
+      - git+https://github.com/DHI-GRAS/gpt_chains.git@v2.8
+      - git+https://github.com/DHI-GRAS/workflow_tools.git
