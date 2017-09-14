@@ -30,8 +30,3 @@ def sort_list_by_date(input_list, research_pattern='r\d{8}', date_format="%Y%m%d
     """
     sorted_list = sorted(input_list, key = lambda x:time.strptime(re.search(research_pattern, x).group(0), date_format))
     return sorted_list
-
-
-print('dakdfjdkjfdkj'+
-        'dfjdkjdfkj')
-        
