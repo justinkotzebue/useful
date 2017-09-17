@@ -1,5 +1,6 @@
 import click
 from yamlconfig.click_option import yaml_config_option
+logger = logging.getLogger(__name__)
 
 
 @click.group()
