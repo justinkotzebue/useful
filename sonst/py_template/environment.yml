@@ -17,3 +17,4 @@ dependencies:
       - git+https://github.com/DHI-GRAS/gdal_utils.git
       - git+https://github.com/DHI-GRAS/gpt_chains.git@v2.8
       - git+https://github.com/DHI-GRAS/workflow_tools.git
+      - git+https://github.com/DHI-GRAS/dhi_mailer.git

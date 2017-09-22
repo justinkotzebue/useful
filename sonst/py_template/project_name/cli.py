@@ -21,7 +21,7 @@ def s2(debug, **kwargs):
     """Create cloud masks for Sentinel 2"""
     from . import workflow as wf
     from . import logs
-    logs.set_cli_logger(debug=debug)
+    logs.set_cli_logger(logfile=r"path_to\s2.txt",debug=debug)
     wf.loop_cm_s2(**kwargs)
 
 
