@@ -21,13 +21,6 @@ def chain_count(mask_list, outfolder, start_time, end_time):
             dst.write(accum.astype(rasterio.int32), 1)
 
 
-# with rasterio.open(outfile, mode='w', **meta) as dst:
-#     dst.write(data_accum.astype(rasterio.uint8), 1)
-
-#
-# cm_files = glob.glob(r"D:\Testing\sentinel\cloud_mask\33VUD\*33VUD*.tif")
-# outfile = r'D:\Testing\sentinel\cloud_mask\33VUD_cm_no_accum2.tif'
-
 def cloud_count_owncloud(cm_files, cloud_count=False):
     """Counts pixels containing cloud and cloud shadow
         Assuming 0 for cloud and 1 for none cloud pixels
