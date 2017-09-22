@@ -23,7 +23,7 @@ def print_number_of_unique_pixels(data_array, maximum_len_table=100,only_int=Tru
         raise ValueError('Shape must be two dimensions not {}'.format(dimension))
 
     print(data_array.dtype)
-    if only_int and not data_array.dtype == 'uint8':
+    if only_int and not data_array.dtype == 'uint8' and not data_array.dtype == 'uint16':
         uv = [num for num in uv if num.is_integer()]
     max_area = data_array.shape[0] * data_array.shape[1]
     print(max_area)

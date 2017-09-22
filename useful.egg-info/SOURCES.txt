@@ -1,5 +1,6 @@
 setup.py
 raster/__init__.py
+raster/reclassify.py
 raster/resample_rasterio.py
 raster/stack.py
 raster/stack_and_add_band_ratio.py
