@@ -222,6 +222,9 @@ colors = dict((
     (3, (0, 255, 0, 255)),  # Herbaceous
     (4, (160, 82, 45, 255)),  # Barren
     (5, (255, 0, 0, 255))  # Urban
+
+# change 2
+# change 3
 ))
 # Put 0 - 255 as float 0 - 1
 for k in colors:
@@ -236,7 +239,6 @@ cmap = plt.matplotlib.colors.ListedColormap(index_colors, 'Classification', n)
 # Now show the classmap next to the image
 plt.subplot(121)
 plt.imshow(img543)
-# bla baladfldkjföasldkjf
 
 plt.subplot(122)
 plt.imshow(class_prediction, cmap=cmap, interpolation='none')
@@ -244,8 +246,6 @@ plt.imshow(class_prediction, cmap=cmap, interpolation='none')
 plt.show()
 
 
-# ## Wrapup
-#
 # We've seen how we can use `scikit-learn` to implement the Random Forest classifier for land cover classification. A couple future directions that immediately follow this tutorial include:
 #
 # + Extend the lessons learned in the [visualization chapter](chapter_3_visualization.ipynb) to explore the class separability along various dimensions of the data. For example, plot the SWIR1 band against the NIR band and label each point in the scatter plot a different color according to the training data label.
