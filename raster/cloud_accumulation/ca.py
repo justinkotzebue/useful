@@ -6,6 +6,12 @@ import rasterio
 import numpy as np
 
 from raster import unique_values as uv
+
+
+# Cloud cover [%] on:
+# - land
+# - water
+
 def chain_count(mask_list, outfolder, start_time, end_time):
     time_list = filter_list_by_time_window(mask_list, start_time, end_time)
     unique_tiles = get_unique_tiles_from_list(time_list)
