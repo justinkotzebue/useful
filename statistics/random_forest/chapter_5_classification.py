@@ -236,6 +236,7 @@ cmap = plt.matplotlib.colors.ListedColormap(index_colors, 'Classification', n)
 # Now show the classmap next to the image
 plt.subplot(121)
 plt.imshow(img543)
+# bla baladfldkjföasldkjf
 
 plt.subplot(122)
 plt.imshow(class_prediction, cmap=cmap, interpolation='none')
