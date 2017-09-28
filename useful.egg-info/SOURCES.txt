@@ -1,10 +1,12 @@
 setup.py
 raster/__init__.py
+raster/mosaicing.py
 raster/reclassify.py
 raster/resample_rasterio.py
 raster/stack.py
 raster/stack_and_add_band_ratio.py
 raster/unique_values.py
+raster/cloud_accumulation/__init__.py
 raster/cloud_accumulation/ca.py
 raster/filtering/__init__.py
 raster/filtering/mnf/__init__.py

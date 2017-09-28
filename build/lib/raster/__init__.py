@@ -1,2 +1,2 @@
-from . import cloud_accumulation
-from . import filtering
+from . import mosaicing
+from .cloud_accumulation import ca

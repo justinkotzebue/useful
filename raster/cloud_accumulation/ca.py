@@ -6,12 +6,14 @@ import rasterio
 import numpy as np
 
 from raster import unique_values as uv
+from raster import mosaicing
+
 def chain_count(mask_list, outfolder, start_time, end_time):
     time_list = filter_list_by_time_window(mask_list, start_time, end_time)
     unique_tiles = get_unique_tiles_from_list(time_list)
     print('processing {} files'.format(len(unique_tiles)))
     for tile_id in unique_tiles:
-        regex = re.compile(".*("+ tile_id +").*")
+        regex = re.compile(".*("+ tile_id +").*") # filter list
         tile_filtered = [m.group() for l in time_list for m in [regex.search(l)] if m]
 
         outfile = os.path.join(outfolder, tile_id + '_' + str(start_time) + '_' + str(end_time) + '.tif')
@@ -131,9 +133,9 @@ def tci_cloud_count_sen2cor(scl_list):
 
 
 
-infolder = r"\\ncr104\d$\NAER\S2\cloudmask_sept\final"
-# outfile = r"/home/jb/Downloads/s2/out.tif"
-mask_list = glob.glob(os.path.join(infolder,'*.tif'))
-outfolder = r"D:\Testing\cloud_count"
-
-chain_count(mask_list, outfolder, start_time=20170912, end_time=20171005)
+# infolder = r"\\ncr104\d$\NAER\S2\cloudmask_sept\final"
+# # outfile = r"/home/jb/Downloads/s2/out.tif"
+# mask_list = glob.glob(os.path.join(infolder,'*.tif'))
+# outfolder = r"D:\Testing\cloud_count"
+#
+# chain_count(mask_list, outfolder, start_time=20170912, end_time=20171005)

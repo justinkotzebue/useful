@@ -1,0 +1,19 @@
+name: useful
+channels:
+    - conda-forge
+dependencies:
+    - python=3
+    - fiona
+    - pyyaml
+    - pandas
+    - rasterio
+    - scikit-learn
+    - matplotlib
+    - statsmodels
+    - gdal
+
+    - pip:
+      - zip
+      - click
+      - git+https://github.com/DHI-GRAS/gis_utils.git
+      - git+https://github.com/DHI-GRAS/workflow_tools.git
