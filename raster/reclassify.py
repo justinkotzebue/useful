@@ -16,3 +16,16 @@ data[data > 10000] = np.nan
 data[data < 0] = np.nan
 with rasterio.open(outtif, mode='w', **meta) as dst:
     dst.write(data.astype(rasterio.float32),1)
+
+array = np.array([1,1,1,0,0,1,0,1,1,1,0,0])
+array = array.reshape(1,3,4)
+array.shape
+array
+
+# change1
+a0 = np.zeros_like(array)
+a0[:,2,2]=255
+a0[:,2,1]=255
+
+a0==255
+array[a0==255] = 3

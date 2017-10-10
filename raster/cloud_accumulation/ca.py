@@ -6,7 +6,15 @@ import rasterio
 import numpy as np
 
 from raster import unique_values as uv
+<<<<<<< HEAD
 from raster import mosaicing
+=======
+
+
+# Cloud cover [%] on:
+# - land
+# - water
+>>>>>>> 9ccbc457ad2a4e42babdc742738d7e3e36068358
 
 def chain_count(mask_list, outfolder, start_time, end_time):
     time_list = filter_list_by_time_window(mask_list, start_time, end_time)

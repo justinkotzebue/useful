@@ -9,6 +9,7 @@ m = s2meta.find_parse_metadata(path)
 'tile_name' in m
 
 g = s2meta.find_parse_granule_metadata(path)
+d= ['RHOS_664', 'SPM_NECHAD2016_664']
 
 gg['tile_id']
 b = s2meta.converters
