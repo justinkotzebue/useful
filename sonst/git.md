@@ -6,6 +6,7 @@ git pull # from repo credentials are stored in conda
 
 # Git Workflow:
 ## create and checkout from master
+`git pull --rebase`
 `git checkout -b branch-name`
 
 ## patching changes before commit
