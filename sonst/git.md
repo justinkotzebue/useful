@@ -22,3 +22,9 @@ git pull # from repo credentials are stored in conda
 `git rebase -i master`  # to get clean history squashing etc.
   exit = ctrl+x and y=yes
 `git push -f origin branch-name:branch-name`  # force (-f) push changes
+
+## Go to git.com pull request and merge branch into master
+
+## Pull merged master branch
+`git pull --rebase`
+`git -D branch-name`  # delete branch-name if not needed anymore
