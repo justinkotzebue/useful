@@ -39,7 +39,7 @@ Now go to git.com, pull request and merge branch into master
 `git -D branch-name`  # delete branch-name if not needed anymore
 
 
-#Save password:
+# Save password:
 
 `git config --global user.email juko@dhigroup.com`
 
