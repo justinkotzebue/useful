@@ -2,6 +2,7 @@ setup.py
 raster/__init__.py
 raster/mosaicing.py
 raster/reclassify.py
+raster/reproject.py
 raster/resample_rasterio.py
 raster/stack.py
 raster/stack_and_add_band_ratio.py
